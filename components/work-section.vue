@@ -136,7 +136,7 @@ const projects = [
 
 const title = "Work";
 const subtitle =
-  "From UI/UX Design to Nuxt.js, Vue.js, Ruby on Rails, and Android. Checkout a selection of my latest web and mobile development projects.";
+  "From UI/UX Design to Nuxt.js, Vue.js, Ruby on Rails and Android. Check out a selection of my latest web and mobile development projects.";
 
 function onIntersectionObserver([
   { isIntersecting, intersectionRatio, target },
