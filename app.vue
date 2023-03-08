@@ -45,6 +45,26 @@
   </div>
 </template>
 
+<script setup>
+const title = ref('Jonas Reif')
+const description = ref('I create digital products - design, code & things in between.')
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+// This will be reactive even you change title/description above
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+</script>
+
 <style scoped>
 html {
   background: black;
