@@ -14,7 +14,7 @@
 
     <!--Subtitle-->
     <div
-      class="mt-8 md:text-lg font-light text-white/70 leading-loose"
+      class="mt-8 max-w-3xl md:text-lg font-light text-white/70 leading-loose"
       v-html="subtitle"
     />
 
@@ -76,9 +76,10 @@
 
 <script setup lang="ts">
 let title = "Software Engineer & Founder";
-let subtitle = `I create digital products - design, code & things in between.<br>
-                    Feel free to take a look at my latest projects below.<br>
-                    Let's have a chat or call if you'd love to hear more!`;
+let subtitle = `I'm Jonas, a software engineer based in Bavaria (soon Berlin) and the co-founder of Upspeak.
+                I've been creating digital products - design, code & things in between - since about 10 years.
+                Feel free to take a look at my latest projects below. <br />
+                Let's have a chat or call if you'd love to hear more!`;
 
 let twitterUrl = "https://twitter.com/reif_jonas";
 let githubUrl = "https://github.com/jony1993";

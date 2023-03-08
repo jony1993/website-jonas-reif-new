@@ -13,14 +13,15 @@
 
     <!--Work Items-->
     <div
-      style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr))"
-      class="px-1 sm:px-20 max-w-3xl mx-auto gap-y-16 mt-10"
+      class="px-1 sm:px-20 max-w-3xl mx-auto gap-y-16 mt-10 grid grid-cols-1"
     >
       <work-card
-        v-for="(project, index) in projects"
-        :key="index"
+        v-for="project in projects"
+        :id="project.id"
+        :key="project.id"
+        v-intersection-observer="[onIntersectionObserver, { threshold: 0.3 }]"
         class="sticky top-[96px] duration-300"
-        :style="{ top: `${96 + index * 6}px` }"
+        :style="{ top: `${96 + project.id * 16}px` }"
         :title="project.title"
         :description="project.description"
         :image="project.image"
@@ -32,8 +33,11 @@
 </template>
 
 <script setup lang="ts">
+import { vIntersectionObserver } from "@vueuse/components";
+
 const projects = [
   {
+    id: 0,
     title: "Upspeak Webapp",
     description:
       "Developed the webapp of Upspeak. The #1 audio course app for personal & professional development.",
@@ -56,6 +60,7 @@ const projects = [
     ],
   },
   {
+    id: 1,
     title: "Upspeak Backend",
     description:
       "Developed the backend of Upspeak with ruby on rails, aws, heroku, postgresql and redis.",
@@ -77,6 +82,7 @@ const projects = [
     ],
   },
   {
+    id: 2,
     title: "Mercedes Vision Project",
     description:
       "Developed a vision prototype with a small team with nuxt.js, tailwindcss and more.",
@@ -92,6 +98,7 @@ const projects = [
     ],
   },
   {
+    id: 3,
     title: "Lokobox Webapp",
     description:
       "Webapp for Media Companies. Project developed as one of the winners of the Open Innovation Challenge.",
@@ -100,6 +107,7 @@ const projects = [
     tags: ["nuxt.js", "tailwind", "firebase", "vercel", "github"],
   },
   {
+    id: 4,
     title: "Meat & Eat Android App",
     description:
       "Project developed as part of my Master Thesis. The Meat & Eat App is a Native Java Android Application focused on UX best practices.",
@@ -108,6 +116,7 @@ const projects = [
     tags: ["android", "java", "mvvm", "jetpack", "firebase", "github"],
   },
   {
+    id: 5,
     title: "Einhell.de",
     description:
       "Further developed and maintained the international Einhell Website as Junior IT-Consultant. As part of the work, business processes were analysed, digitalised and integrated.",
@@ -116,6 +125,7 @@ const projects = [
     tags: ["typo3", "JavaScript", "HTML", "CSS", "jQuery", "Bootstrap"],
   },
   {
+    id: 6,
     title: "Other Projects",
     description:
       "Developed several other websites and webapps (e.g. isc-gmbh.info, alicabuechel.com, zmsa.co.za, ... )",
@@ -127,6 +137,23 @@ const projects = [
 const title = "Work";
 const subtitle =
   "From UI/UX Design to Nuxt.js, Vue.js, Ruby on Rails, and Android. Checkout a selection of my latest web and mobile development projects.";
+
+function onIntersectionObserver([
+  { isIntersecting, intersectionRatio, target },
+]) {
+  console.log(isIntersecting, intersectionRatio, target);
+  // get all targets which "id" is lower then the current target
+  projects.forEach((p) => {
+    if (p.id < target.id && isIntersecting) {
+      console.log(p.id, target.id);
+      document
+        .getElementById(p.id)
+        .classList.add("scale-[92%]", "duration-1000");
+    } else {
+      document.getElementById(p.id).classList.remove("scale-[92%]");
+    }
+  });
+}
 </script>
 
 <style scoped>
