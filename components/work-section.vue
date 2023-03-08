@@ -12,7 +12,10 @@
     />
 
     <!--Work Items-->
-    <div class="px-1 sm:px-20 max-w-3xl mx-auto grid grid-columns-1 auto-rows-max gap-y-16 mt-10">
+    <div
+      style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr))"
+      class="px-1 sm:px-20 max-w-3xl mx-auto gap-y-16 mt-10"
+    >
       <work-card
         v-for="(project, index) in projects"
         :key="index"

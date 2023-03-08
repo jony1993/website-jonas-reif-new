@@ -3,6 +3,7 @@
     <!--Profile Image-->
     <img
       src="/logo.png"
+      alt="Profile Image Jonas Reif"
       class="rounded-full bg-primary/10 object-cover h-16 w-16"
     />
 

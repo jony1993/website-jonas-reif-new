@@ -22,6 +22,7 @@
 
       <img
         src="/arrow_down.svg"
+        alt="arrow down icon"
         class="animate-bounce duration-2000 mx-auto"
       />
 
@@ -32,6 +33,7 @@
 
       <img
         src="/arrow_down.svg"
+        alt="arrow down icon"
         class="animate-bounce duration-2000 mx-auto"
       />
 
