@@ -1,7 +1,7 @@
 <template>
-  <div ref="root" class="py-14 mx-auto text-center">
+  <div ref="root" class="py-10 md:py-14 mx-auto text-center">
     <!--Title-->
-    <h2 class="heading text-3xl md:text-6xl font-bold tracking-tight mt-10">
+    <h2 class="heading text-3xl md:text-6xl font-bold tracking-tight">
       {{ title }}
     </h2>
 

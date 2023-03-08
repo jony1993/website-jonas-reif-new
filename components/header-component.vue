@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-28 md:pt-40 pb-14 mx-auto text-left">
+  <div class="pt-28 md:pt-28 pb-4 md:pb-14 mx-auto text-left">
     <!--Profile Image-->
     <img
       src="/logo.png"
@@ -8,7 +8,7 @@
     />
 
     <!--Title-->
-    <h1 class="heading text-4xl md:text-7xl font-bold tracking-tight mt-10">
+    <h1 class="heading text-4xl md:text-7xl font-bold tracking-tight mt-8">
       {{ title }}
     </h1>
 
