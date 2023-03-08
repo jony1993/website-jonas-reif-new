@@ -3,7 +3,13 @@ export default <Partial<Config>>{
   content: ["content/**/*.md"],
   theme: {
     container: {
-      padding: "1rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
     },
     extend: {
       fontFamily: {

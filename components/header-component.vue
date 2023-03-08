@@ -1,5 +1,5 @@
 <template>
-  <div class="py-40 mx-auto text-left">
+  <div class="pt-28 md:pt-40 pb-14 mx-auto text-left">
     <!--Profile Image-->
     <nuxt-img
       src="/logo.png"
@@ -23,6 +23,7 @@
         class="group -m-1 p-1"
         aria-label="Follow on Twitter"
         :href="twitterUrl"
+        target="_blank"
       >
         <svg
           viewBox="0 0 24 24"
@@ -34,7 +35,12 @@
           />
         </svg>
       </a>
-      <a class="group -m-1 p-1" aria-label="Follow on GitHub" :href="githubUrl">
+      <a
+        class="group -m-1 p-1"
+        aria-label="Follow on GitHub"
+        :href="githubUrl"
+        target="_blank"
+      >
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
@@ -51,6 +57,7 @@
         class="group -m-1 p-1"
         aria-label="Follow on LinkedIn"
         :href="linkedinUrl"
+        target="_blank"
       >
         <svg
           viewBox="0 0 24 24"
@@ -68,7 +75,7 @@
 
 <script setup lang="ts">
 let title = "Software Engineer & Founder";
-let subtitle = `I create digital products - design, code & things in between.<br> 
+let subtitle = `I create digital products - design, code & things in between.<br>
                     Feel free to take a look at my latest projects below.<br>
                     Let's have a chat or call if you'd love to hear more!`;
 
