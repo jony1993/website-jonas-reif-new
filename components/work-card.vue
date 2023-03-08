@@ -1,5 +1,7 @@
 <template>
-  <div class="relative text-white bg-[#120924] bg-opacity-[98%] backdrop-blur-xl border border-white/10 rounded-xl p-6 sm:p-12">
+  <div
+    class="relative text-white bg-[#120924] bg-opacity-[98%] backdrop-blur-xl border border-white/10 rounded-xl p-6 sm:p-12"
+  >
     <!--Background grid-->
     <div class="absolute inset-0 bg-[url(/grid.svg)]"></div>
 
@@ -30,7 +32,7 @@
       :src="image"
       :alt="`${title} image`"
       class="mt-4 rounded"
-      />
+    />
   </div>
 </template>
 
