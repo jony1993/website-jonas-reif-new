@@ -1,7 +1,7 @@
 <template>
   <div class="pt-28 md:pt-40 pb-14 mx-auto text-left">
     <!--Profile Image-->
-    <nuxt-img
+    <img
       src="/logo.png"
       class="rounded-full bg-primary/10 object-cover h-16 w-16"
     />
