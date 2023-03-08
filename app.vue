@@ -20,7 +20,7 @@
         class="container max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-5xl mx-auto"
       />
 
-      <nuxt-img
+      <img
         src="/arrow_down.svg"
         class="animate-bounce duration-2000 mx-auto"
       />
@@ -30,7 +30,7 @@
         <work-section />
       </section>
 
-      <nuxt-img
+      <img
         src="/arrow_down.svg"
         class="animate-bounce duration-2000 mx-auto"
       />
