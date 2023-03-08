@@ -12,7 +12,7 @@
     />
 
     <!--Contact Ways-->
-    <div class="grid grid-cols-1 max-w-2xl mx-auto gap-6 mt-10">
+    <div class="grid grid-cols-1 max-w-2xl mx-auto gap-3 sm:gap-6 mt-10">
       <a
         v-for="(contact, index) in contactWays"
         :key="index"

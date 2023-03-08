@@ -1,9 +1,9 @@
 <template>
   <div
-    class="h-full group relative text-white bg-[#120924] bg-opacity-[98%] backdrop-blur-xl border border-white/10 rounded-xl p-6 sm:p-12"
+    class="h-full group relative text-white bg-[#120924] bg-opacity-[98%] backdrop-blur-xl border border-white/10 rounded-xl p-4 sm:p-12"
   >
     <!--Title-->
-    <h3 class="text-lg md:text-3xl font-bold text-left text-white/90">
+    <h3 class="text-xl md:text-3xl font-bold text-left text-white/90">
       {{ title }}
     </h3>
 
