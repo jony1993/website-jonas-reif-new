@@ -1,20 +1,15 @@
 <template>
-  <div class="pt-28 md:pt-28 pb-4 md:pb-14 mx-auto text-left">
-    <!--Profile Image-->
-    <img
-      src="/logo.png"
-      alt="Profile Image Jonas Reif"
-      class="rounded-full bg-primary/10 object-cover h-16 w-16"
-    />
-
+  <div class="pt-10 md:pt-28 pb-4 md:pb-14 mx-auto text-left">
     <!--Title-->
-    <h1 class="heading text-4xl md:text-7xl font-bold tracking-tight mt-8">
+    <h1
+      class="text-primary dark:text-white text-3xl md:text-6xl font-bold tracking-tight"
+    >
       {{ title }}
     </h1>
 
     <!--Subtitle-->
     <div
-      class="mt-8 max-w-3xl md:text-lg font-light text-white/70 leading-loose"
+      class="mt-8 max-w-3xl md:text-lg font-light text-primary dark:text-white/70 leading-loose"
       v-html="subtitle"
     />
 
@@ -75,8 +70,8 @@
 </template>
 
 <script setup lang="ts">
-let title = "Software Engineer & Founder";
-let subtitle = `I'm Jonas, a software engineer based in Bavaria (soon Berlin) and the co-founder of Upspeak.
+let title = "Digital Product Creator";
+let subtitle = `I'm Jonas, a software engineer and digital product creator based in Bavaria (soon Berlin) and the co-founder of Upspeak.
                 I've been creating digital products - design, code & things in between - since about 10 years.
                 Feel free to take a look at my latest projects below. <br />
                 Let's have a chat or call if you'd love to hear more!`;
@@ -85,16 +80,3 @@ let twitterUrl = "https://twitter.com/reif_jonas";
 let githubUrl = "https://github.com/jony1993";
 let linkedinUrl = "https://www.linkedin.com/in/jonas-reif/";
 </script>
-
-<style scoped>
-.heading {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-</style>

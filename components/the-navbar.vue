@@ -1,22 +1,40 @@
 <template>
-  <nav class="pointer-events-auto flex flex-nowrap">
-    <ul
-      class="flex rounded-full bg-white bg-opacity-[3%] px-3 text-sm font-medium text-white shadow-lg ring-1 ring-white ring-opacity-10 backdrop-blur"
-    >
-      <li v-for="(item, index) in navItems" :key="index">
-        <div
-          class="relative block px-3 py-2 transition hover:text-white cursor-pointer"
-          @click="scrollToSection(item.id)"
+  <div class="flex flex-nowrap items-center space-x-2 justify-between">
+    <!--Profile Image-->
+    <img
+      src="/logo.png"
+      alt="Profile Image Jonas Reif"
+      class="rounded-full bg-primary/10 object-cover h-12 w-12"
+    />
+    <!--Navbar-->
+    <div>
+      <nav class="pointer-events-auto flex flex-nowrap">
+        <ul
+          class="flex rounded-full bg-white bg-opacity-[3%] px-3 text-sm font-medium text-primary dark:text-white shadow-lg bg-white/90 shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
         >
-          {{ item.name }}
-          <span
-            v-if="item.current.value"
-            class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary/0 via-white/40 to-teal-primary/0"
-          />
-        </div>
-      </li>
-    </ul>
-  </nav>
+          <li v-for="(item, index) in navItems" :key="index">
+            <div
+              class="relative block px-3 py-2 transition dark:hover:text-white hover:text-primary cursor-pointer"
+              :class="
+                item.current.value
+                  ? 'text-teal-500'
+                  : 'text-primary dark:text-white'
+              "
+              @click="scrollToSection(item.id)"
+            >
+              {{ item.name }}
+              <span
+                v-if="item.current.value"
+                class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary/0 via-teal-500 to-primary/0"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--Theme Switcher-->
+    <theme-switcher />
+  </div>
 </template>
 
 <script setup lang="ts">

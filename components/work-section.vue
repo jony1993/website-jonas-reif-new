@@ -1,19 +1,21 @@
 <template>
   <div ref="root" class="py-10 md:py-14 mx-auto text-center">
     <!--Title-->
-    <h2 class="heading text-3xl md:text-6xl font-bold tracking-tight">
+    <h2
+      class="text-primary dark:text-white text-3xl md:text-6xl font-bold tracking-tight"
+    >
       {{ title }}
     </h2>
 
     <!--Subtitle-->
     <div
-      class="mt-8 md:text-lg font-light text-white/70 leading-loose max-w-2xl mx-auto"
+      class="mt-8 md:text-lg font-light text-primary dark:text-white/70 leading-loose max-w-2xl mx-auto"
       v-html="subtitle"
     />
 
     <!--Work Items-->
     <div
-      class="px-1 sm:px-20 max-w-3xl mx-auto gap-y-16 mt-10 grid grid-cols-1"
+      class="px-1 sm:px-20 max-w-4xl mx-auto gap-y-16 mt-10 grid grid-cols-1"
     >
       <work-card
         v-for="project in projects"
@@ -41,7 +43,7 @@ const projects = [
     title: "Upspeak Webapp",
     description:
       "Developed the webapp of Upspeak. The #1 audio course app for personal & professional development.",
-    image: "/upspeak_web_1.png",
+    image: "/upspeak_web.png",
     url: "https://www.upspeak.de",
     tags: [
       "vue.js",
@@ -64,7 +66,7 @@ const projects = [
     title: "Upspeak Backend",
     description:
       "Developed the backend of Upspeak with ruby on rails, aws, heroku, postgresql and redis.",
-    image: "",
+    image: "/upspeak_backend.png",
     url: "https://www.upspeak.de",
     tags: [
       "ruby on rails",
@@ -141,11 +143,9 @@ const subtitle =
 function onIntersectionObserver([
   { isIntersecting, intersectionRatio, target },
 ]) {
-  console.log(isIntersecting, intersectionRatio, target);
   // get all targets which "id" is lower then the current target
   projects.forEach((p) => {
     if (p.id < target.id && isIntersecting) {
-      console.log(p.id, target.id);
       document
         .getElementById(p.id)
         .classList.add("scale-[92%]", "duration-1000");
@@ -155,16 +155,3 @@ function onIntersectionObserver([
   });
 }
 </script>
-
-<style scoped>
-.heading {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-</style>
