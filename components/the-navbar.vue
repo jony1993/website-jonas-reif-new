@@ -43,9 +43,9 @@ import { useIntersectionObserver } from "@vueuse/core";
 
 let navItems = [
   {
-    name: "Home",
-    href: "#home",
-    id: "home",
+    name: "About",
+    href: "#about",
+    id: "about",
     current: ref(true),
   },
   {

@@ -22,7 +22,7 @@
 
       <!--Header-->
       <header-component
-        id="home"
+        id="about"
         class="container max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-5xl mx-auto mt-4"
       />
 
