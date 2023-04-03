@@ -15,15 +15,12 @@
 
     <!--Work Items-->
     <div
-      class="px-1 sm:px-20 max-w-4xl mx-auto gap-y-16 mt-10 grid grid-cols-1"
+      class="grid grid-cols-1 gap-8 max-w-3xl mx-auto mt-8"
     >
       <work-card
         v-for="project in projects"
         :id="project.id"
         :key="project.id"
-        v-intersection-observer="[onIntersectionObserver, { threshold: 0.3 }]"
-        class="sticky top-[96px] duration-300"
-        :style="{ top: `${96 + project.id * 16}px` }"
         :title="project.title"
         :description="project.description"
         :image="project.image"
@@ -110,12 +107,12 @@ const projects = [
   },
   {
     id: 4,
-    title: "Meat & Eat Android App",
+    title: "Meet & Eat Android App",
     description:
-      "Project developed as part of my Master Thesis. The Meat & Eat App is a Native Java Android Application focused on UX best practices.",
-    image: "",
+      "Project developed as part of my Master Thesis. The Meet & Eat App is a Native Java Android Application focused on UX best practices.",
+    image: "/meet.png",
     url: "https://github.com/jony1993/app-android-meet-and-eat",
-    tags: ["android", "java", "mvvm", "jetpack", "firebase", "github"],
+    tags: ["android", "java", "mvvm", "jetpack", "firebase", "github", "ux", "jwt", "REST", "Google Maps", "Contact API"],
   },
   {
     id: 5,
@@ -140,18 +137,4 @@ const title = "Work";
 const subtitle =
   "From UI/UX Design to Nuxt.js, Vue.js, Ruby on Rails and Android. Check out a selection of my latest web and mobile development projects.";
 
-function onIntersectionObserver([
-  { isIntersecting, intersectionRatio, target },
-]) {
-  // get all targets which "id" is lower then the current target
-  projects.forEach((p) => {
-    if (p.id < target.id && isIntersecting) {
-      document
-        .getElementById(p.id)
-        .classList.add("scale-[92%]", "duration-1000");
-    } else {
-      document.getElementById(p.id).classList.remove("scale-[92%]");
-    }
-  });
-}
 </script>

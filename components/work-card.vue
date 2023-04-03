@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-full group relative text-primary dark:text-white bg-zinc-50 dark:bg-white/5 backdrop-blur-xl border border-primary/10 dark:border-white/10 rounded-xl p-4 sm:p-12"
+    class="h-full group relative text-primary dark:text-white bg-zinc-100 dark:bg-white/5 backdrop-blur-xl border border-primary/10 dark:border-white/10 rounded-xl p-4 sm:p-12"
   >
     <!--Title-->
     <h3
