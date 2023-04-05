@@ -15,7 +15,7 @@
       <g clip-path="url(#c)">
         <path
           fill="url(#d)"
-          fill-opacity=".04"
+          fill-opacity=".06"
           d="M65.486 114.906 3.804 52.143a4 4 0 0 1 .049-5.657l62.764-61.682a4 4 0 0 1 5.656.049l61.683 62.764a4 4 0 0 1-.05 5.656l-62.763 61.683a4 4 0 0 1-5.657-.05Z"
         />
       </g>
@@ -30,7 +30,7 @@
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="currentColor" />
-        <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+        <stop offset="1" stop-color="#15b8a6" stop-opacity="0" />
       </radialGradient>
       <radialGradient
         id="d"
@@ -40,8 +40,8 @@
         gradientTransform="rotate(-89.502 93.538 24.437) scale(84.8528)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#fff" />
-        <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+        <stop stop-color="#15b8a6" />
+        <stop offset="1" stop-color="#15b8a6" stop-opacity="0" />
       </radialGradient>
       <clipPath id="a">
         <path
