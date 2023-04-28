@@ -19,10 +19,10 @@
         :key="category.id"
         :class="
           selectedCategory.id === category.id
-            ? 'bg-gray-100'
-            : 'bg-white bg-opacity-[3%] text-white/50'
+            ? 'dark:bg-gray-100 bg-primary text-white dark:text-primary'
+            : 'dark:bg-white/5 bg-opacity-[5%] bg-primary dark:text-white text-primary'
         "
-        class="inline-block shadow-lg p-2 mr-2 mt-2 mb-2 br-2 rounded uppercase text-xs cursor-pointer hover:bg-white hover:text-gray-900"
+        class="inline-block shadow p-2 mr-2 mt-2 mb-2 br-2 rounded uppercase text-xs cursor-pointer hover:bg-primary dark:hover:bg-white dark:hover:text-gray-900 hover:text-white"
         @click="selectCategory(category)"
       >
         {{ category.name }}
